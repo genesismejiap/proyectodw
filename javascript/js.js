@@ -92,6 +92,6 @@ class Carrusel {
     }
 
     moveTo(index){
-        this.track.style.transform = translateX(-${index * 100}vw);
+        this.track.style.transform = 'translateX(-' + (index * 100) + 'vw)';
     }
 }
