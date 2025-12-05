@@ -308,19 +308,7 @@ body {
     justify-content: center; 
 }
 
-.price {
-    background: white;
-    color: #00a6d6;
-    font-weight: 700;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 25px;
-    font-size: 1.5rem;
-}
+
 
 .catalogo-right h2 {
     font-size: 2rem;
@@ -336,10 +324,10 @@ body {
 /* Botón */
 .btn-order {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 12px 25px;
     background: #4db4ff;
     color: white;
-    border-radius: 30px;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     transition: .3s;
