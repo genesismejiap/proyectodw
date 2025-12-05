@@ -182,3 +182,105 @@ body {
     background: #ff6584;
     transform: scale(1.3);
 }
+
+.sobre-nosotros {
+    padding: 60px 8%;
+    background: #eef2ff;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.contenido-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+    gap: 40px;
+}
+
+.info h3,
+.features h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.info p,
+.features p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Botón azul */
+.btn-azul {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #4db4ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-azul:hover {
+    background: #299be6;
+}
+
+/* Botón rosa */
+.btn-rosa {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ff85ad;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-rosa:hover {
+    background: #ff6895;
+}
+
+/* Imagen del medio */
+.imagen-central img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #0002;
+}
+
+/* Lista */
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.features li::before {
+    margin-right: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contenido-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .imagen-central img {
+        max-width: 70%;
+        margin: auto;
+        display: block;
+    }
+}
