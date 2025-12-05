@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff;
+    background: #f8e57b;
     padding: 15px 30px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     position: sticky;
@@ -23,7 +23,7 @@ body {
 .logo {
     font-size: 26px;
     font-weight: 700;
-    color: #86b300;
+    color: #2e7d22;
 }
 
 
