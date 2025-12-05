@@ -12,86 +12,70 @@ document.addEventListener("DOMContentLoaded", ()=>{
 // Programacion Orientado Objetos
 
 class Carrusel {
-    contendor = null;
-    track = null;
-    items = [];
+    constructor(contenedor) {
+        this.container = contenedor;
+        this.track = contenedor.querySelector(".carrusel-track");
+        this.items = [...this.track.children];
 
-    direction = 1;
+        this.btnLeft = contenedor.querySelector(".carrusel_left");
+        this.btnRight = contenedor.querySelector(".carrusel_right");
+        this.indicadores = contenedor.querySelector(".carrusel-indicadores");
 
-    timeInSeconds = 3;
-    timerId = null;
-    currentItem = 0;
+        this.actual = 0;
+        this.timer = null;
 
-    // Carusel generated UX
-    rightButton = null;
-    leftButton = null;
-
-    constructor(contenedor){
-        this.contendor = contenedor;
-        this.track = this.contendor.querySelector(".carrusel-track");
-        /* spread operator */
-        this.items = [...this.track.querySelectorAll(".carrusel-item")];
+        this.crearIndicadores();
+        this.eventos();
+        this.auto();
     }
 
-    init(){
-        console.log("Carrusel Inicializado");
-        console.log("items:", this.items);
-        this.generateUX();
-        this.tick();
-    }
-
-    generateUX(){
-        this.rightButton = document.createElement("button");
-        this.leftButton = document.createElement("button");
-        this.rightButton.classList.add("carrusel_right");
-        this.leftButton.classList.add("carrusel_left");
-        this.rightButton.innerHTML = ">";
-        this.leftButton.innerHTML = "<";
-
-        this.rightButton.addEventListener("click", (e)=>{
-            this.moveToDirection(1);
+    crearIndicadores() {
+        this.items.forEach((_, i) => {
+            const b = document.createElement("span");
+            if (i === 0) b.classList.add("activo");
+            b.addEventListener("click", () => this.irA(i));
+            this.indicadores.appendChild(b);
         });
+    }
 
-        this.leftButton.addEventListener("click", (e)=>{
-            this.moveToDirection(-1);
+    eventos() {
+        this.btnRight.onclick = () => this.siguiente();
+        this.btnLeft.onclick = () => this.anterior();
+        this.container.onmouseenter = () => clearInterval(this.timer);
+        this.container.onmouseleave = () => this.auto();
+    }
+
+    actualizarIndicadores() {
+        [...this.indicadores.children].forEach((p, i) => {
+            p.classList.toggle("activo", i === this.actual);
         });
-
-        this.contendor.appendChild(this.rightButton);
-        this.contendor.appendChild(this.leftButton);
     }
 
-    moveToDirection(nextDirection) {
-        clearTimeout(this.timerId);
-        this.direction = nextDirection;
-        this.moveToNext();
-        this.tick();
+    siguiente() {
+        this.actual = (this.actual + 1) % this.items.length;
+        this.mover();
     }
 
-    tick(){
-        this.timerId = setTimeout(
-            ()=>{
-                this.moveToNext();
-                this.tick()
-            },
-            this.timeInSeconds * 1000
-        );
+    anterior() {
+        this.actual = (this.actual - 1 + this.items.length) % this.items.length;
+        this.mover();
     }
 
-    moveToNext(){
-        let nextIndex = this.currentItem + this.direction;
-        if (nextIndex < 0) {
-            nextIndex = 1;
-            this.direction = 1;
-        }
-        if (nextIndex === this.items.length) {
-            nextIndex -= 2;
-            this.direction = -1;
-        }
-        this.currentItem = nextIndex;
-        this.moveTo(nextIndex);
+    irA(index) {
+        this.actual = index;
+        this.mover();
     }
 
-    moveTo(index){
-        this.track.style.transform = 'translateX(-' + (index * 100) + 'vw)';
+    mover() {
+        this.track.style.transform = `translateX(-${this.actual * 100}%)`;
+        this.actualizarIndicadores();
+    }
+
+    auto() {
+        this.timer = setInterval(() => this.siguiente(), 4000);
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    new Carrusel(document.querySelector(".carrusel"));
+});
