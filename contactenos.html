@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiá Tsojo - Contacto</title>
+    <link rel="stylesheet" href="styles/contactanos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <i class="fas fa-ice-cream"></i>
+            <span>Quiá Tsojo</span>
+        </div>
+        <div class="nav-placeholder"></div>
+    </nav>
+
+    <div class="container">
+        <div class="header-section">
+            <h1><i class="fas fa-envelope"></i> Contáctanos</h1>
+            <a href="index.html" class="home-btn">
+                <i class="fas fa-home"></i> Volver al Inicio
+            </a>
+        </div>
+        
+        <div class="content">
+            <div class="contact-info">
+                <div class="info-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Dirección</h3>
+                    <p>Av. Principal 123, Ciudad</p>
+                </div>
+                
+                <div class="info-box">
+                    <i class="fas fa-phone"></i>
+                    <h3>Teléfono</h3>
+                    <p>+1 234 567 890</p>
+                    <p>Lun-Dom: 10AM - 10PM</p>
+                </div>
+                
+                <div class="info-box">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>contacto@quiatsojo.com</p>
+                </div>
+                
+                <div class="social">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/quiatsojo?igsh=bmJxaGJ3Y285ODhh" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Envíanos un mensaje</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Tu nombre" required>
+                        <div class="error" id="nameError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Tu email" required>
+                        <div class="error" id="emailError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Tu mensaje" rows="5" required></textarea>
+                        <div class="error" id="messageError"></div>
+                    </div>
+                    
+                    <button type="submit">Enviar Mensaje</button>
+                    <div id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Heladería Quiá Tsojo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="javascript/contactanos.js"></script>
+</body>
+</html>
