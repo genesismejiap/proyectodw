@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style.css">
     <script src="javascript/js.js" defer></script>
     <title>Quiá tsojo</title>
 </head>
+
 <body>
 
-<nav class="barra">
+<!-- BARRA SUPERIOR
+ <nav class="barra">
     <div class="logo">Quiá tsojo</div>
 
     <ul class="menu" id="menu">
@@ -17,116 +19,117 @@
         <li><a href="acerca.html">Eventos</a></li>
         <li><a href="productos.html">Novedades</a></li>
         <li><a href="menu.html">Trabaja con nosotros</a></li>
-        <li><a href="galeria.html">Contactanos</a></li>
-        <li><a href="galeria.html">Preguntas Frecuentes</a></li>
-    </ul>
-
-    <ul class="menu">
-         <li><a href="trabajo.html">Trabaja con Nosotros</a></li> 
-        <li><a href="novedades.html">Novedades</a></li>
-        <li><a href="Eventos.html">Eventos</a></li>
         <li><a href="contactenos.html">Contáctanos</a></li>
         <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
     </ul>
 </nav>
 
 <header>
+    <section class="banner-superior">
+        <img src="assets/img/logo.jpeg" alt="Imagen Principal">
+    </section>
+</header>
+ -->
+<nav>
+    <div class="logo">
+        <i class="fas fa-ice-cream"></i>
+        <span>Quiá Tsojo</span>
+    </div>
+
+    <!-- Menú principal -->
+    <ul class="menu" id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="acerca.html">Eventos</a></li>
+        <li><a href="productos.html">Novedades</a></li>
+        <li><a href="menu.html">Trabaja con nosotros</a></li>
+        <li><a href="contactenos.html">Contáctanos</a></li>
+        <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+    </ul>
+
+    <!-- Icono de menú para móviles -->
+    <div class="icono-menu" id="icono-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+
+
+
 <main>
 
-<section class="carrusel">
-    <div class="carrusel-track">
-        <div class="carrusel-item" data-title="Helado Tradicional">
-            <img src="assets/img/helados1.jpg">
-        </div>
+   
+    <section class="sobre-nosotros">
+        <h2 class="titulo-seccion">Un Delicioso & Tradicional Helado</h2>
 
-        <div class="carrusel-item" data-title="Sabor Natural">
-            <img src="assets/img/helados2.jpg">
-        </div>
-
-        <div class="carrusel-item" data-title="Hecho en Casa">
-            <img src="assets/img/helados3.jpg">
-        </div>
-    </div>
-
-    <button class="carrusel_left">◀</button>
-    <button class="carrusel_right">▶</button>
-
-    <div class="carrusel-indicadores"></div>
-</section>
-
-<section class="sobre-nosotros">
-    <h2 class="titulo-seccion">Un Delicioso & Tradicional Helado</h2>
-
-    <div class="contenido-section">
-        <div class="info">
-            <h3>Acerca de Nosotros</h3>
-            <p>Eos kasd eos dolor vero vero, lorem stet diam rebum. Ipsum amet sed vero dolor sea.</p>
-            <p>Amet sit amet amet no. Est nonumy sed labore eirmod sit magna.</p>
-            <a class="btn-azul" href="acerca.html">Saber Más</a>
-        </div>
-
-        <div class="imagen-central">
-            <img src="assets/img/helados3.jpg" alt="">
-        </div>
-    </div>
-</section>
-
-<section class="catalogo">
-    <div class="catalogo-left">
-        <img src="assets/img/helados3.jpg" alt="Ice Cream Promo">
-    </div>
-
-    <div class="catalogo-right">
-        <h2>Menú</h2>
-
-        <p>
-            Tenemos diferentes tipos de helados y comida
-        </p>
-
-        <a href="#" class="btn-order">Ver Menú</a>
-    </div>
-</section>
-
-<section class="servicios">
-    <h2 class="titulo-seccion">Los Mejores Productos<br>Para Nuestros Clientes</h2>
-
-    <div class="servicios-grid">
-
-        <div class="card-servicio">
-            <div class="img-wrap">
-                <img src="assets/img/helados1.jpg" alt="">
+        <div class="contenido-section">
+            <div class="info">
+                <h3>Acerca de Nosotros</h3>
+                <p>Eos kasd eos dolor vero vero, lorem stet diam rebum. Ipsum amet sed vero dolor sea.</p>
+                <p>Amet sit amet amet no. Est nonumy sed labore eirmod sit magna.</p>
+                <a class="btn-azul" href="acerca.html">Saber Más</a>
             </div>
-            <h3>Helado1</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ipsum, beatae unde hic mollitia reiciendis culpa, quidem voluptates quis perspiciatis 
-                in voluptas? Unde eligendi voluptate distinctio, dolor ullam architecto possimus..</p>
-            <a href="#">Ver Producto</a>
-        </div>
 
-        <div class="card-servicio">
-            <div class="img-wrap">
-                <img src="assets/img/helados2.jpg" alt="">
+            <div class="imagen-central">
+                <img src="assets/img/helados3.jpg" alt="Helado tradicional">
             </div>
-            <h3>Helado2</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus iste at quam quia aliquid perspiciatis facilis quo perferendis, ipsa illo ab
-                 temporibus ullam nihil nulla reprehenderit ea inventore ipsum quasi!</p>
-            <a href="#">Ver Producto</a>
+        </div>
+    </section>
+
+ 
+    <section class="catalogo">
+        <div class="catalogo-left">
+            <img src="assets/img/helados3.jpg" alt="Ice Cream Promo">
         </div>
 
-        <div class="card-servicio">
-            <div class="img-wrap">
-                <img src="assets/img/helados3.jpg" alt="">
+        <div class="catalogo-right">
+            <h2>Menú</h2>
+            <p>Tenemos diferentes tipos de helados y comida</p>
+            <a href="menu.html" class="btn-order">Ver Menú</a>
+        </div>
+    </section>
+
+   
+    <section class="servicios">
+        <h2 class="titulo-seccion">Los Mejores Productos<br>Para Nuestros Clientes</h2>
+
+        <div class="servicios-grid">
+
+            <div class="card-servicio">
+                <div class="img-wrap">
+                    <img src="assets/img/nachos.jpeg" alt="Comida">
+                </div>
+                <h3>Comida</h3>
+                <p>Te presentamos los best seller de nuestro menu</p>
+                <a href="producto.html">Ver Producto</a>
             </div>
-            <h3>Helado3</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et placeat perspiciatis officia ullam accusamus velit recusandae error facere illo iusto modi magni sequi 
-                soluta sint suscipit, provident sunt molestias necessitatibus.</p>
-            <a href="#">Ver Producto</a>
-        </div>
 
-    </div>
-</section>
+            <div class="card-servicio">
+                <div class="img-wrap">
+                    <img src="assets/img/licuado.jpeg" alt="Bebidas">
+                </div>
+                <h3>Bebidas</h3>
+                <p>Las mejores bebidad de nuestro menu</p>
+                <a href="producto.html">Ver Producto</a>
+            </div>
+
+            <div class="card-servicio">
+                <div class="img-wrap">
+                    <img src="assets/img/helados3.jpg" alt="Helado">
+                </div>
+                <h3>Helado</h3>
+                <p>Tienes antojo de  un postre</p>
+                <a href="producto.html">Ver Producto</a>
+            </div>
+
+        </div>
+    </section>
 
 </main>
-</header>
+ <footer>
+        <p>&copy; 2025 Heladería Quiá Tsojo. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>

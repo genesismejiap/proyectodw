@@ -1,30 +1,32 @@
 /* Fuente general */
 body {
     margin: 0;
+    padding: 0;
     font-family: "Poppins", sans-serif;
     background-color: #f5f5f5;
 }
 
-/* Barra */
-.barra {
+nav {
+    background: linear-gradient(to right, #fda008, #fdb020);
+    color: white;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #f8e57b;
-    padding: 15px 30px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Logo */
+
+
 .logo {
     font-size: 26px;
     font-weight: 700;
     color: #2e7d22;
 }
 
+.nav-placeholder {
+    width: 100px; /* Espacio para mantener el balance */
+}
 /* Lista del menú */
 .menu {
     list-style: none;
@@ -49,7 +51,7 @@ body {
     border-color: #86b300;
 }
 
-/* ------------------------------ MENÚ HAMBURGUESA ------------------------------ */
+
 
 .icono-menu {
     display: none;
@@ -66,7 +68,7 @@ body {
     transition: .3s;
 }
 
-/* ------------------------------ RESPONSIVE ------------------------------ */
+
 @media (max-width: 768px) {
     .icono-menu {
         display: flex;
@@ -91,97 +93,79 @@ body {
     }
 }
 
-/* ------------------------------ CARRUSEL ------------------------------ */
-
-.carrusel {
-    position: relative;
+.banner-superior {
+    width: 100%;        /* ← Esto sí respeta el tamaño real visible */
+    height: 60vh;
     overflow: hidden;
-    height: 60vh;
+    margin: 0;
+    padding: 0;
 }
 
-.carrusel-track {
-    display: flex;
-    transition: transform .9s cubic-bezier(.25,.8,.25,1);
-}
-
-.carrusel-item {
-    min-width: 100%;
-    height: 60vh;
-    position: relative;
-}
-
-.carrusel-item img {
+.banner-superior img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-/* Texto animado */
-.carrusel-item::after {
-    content: attr(data-title);
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    padding: 12px 25px;
-    background: #ffffffbb;
-    border-radius: 12px;
-    opacity: 0;
-    animation: fadeText .8s ease forwards;
-}
-
-@keyframes fadeText {
-    from {
-        opacity: 0;
-        transform: translateX(-50%) translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
+@media (max-width: 768px) {
+    .banner-superior {
+        height: 40vh;   /* reduce altura en pantallas pequeñas */
     }
 }
 
-/* Flechas */
-.carrusel_left, .carrusel_right {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #ffffffaa;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1.8rem;
-    cursor: pointer;
-    border-radius: 10px;
-    backdrop-filter: blur(6px);
-}
-
-.carrusel_left { left: 10px; }
-.carrusel_right { right: 10px; }
-
-/* Indicadores */
-.carrusel-indicadores {
-    position: absolute;
-    bottom: 15px;
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
     width: 100%;
-    text-align: center;
+    flex: 1;
 }
 
-.carrusel-indicadores span {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 0 4px;
-    background: #ffffff90;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: .3s;
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.carrusel-indicadores .activo {
-    background: #ff6584;
-    transform: scale(1.3);
+h1 {
+    color: #fdb020;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
+
+.home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fec73f;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+    font-size: clamp(0.85rem, 1.5vw, 0.9rem);
+    white-space: nowrap;
+}
+
+.home-btn:hover {
+    background: #fdb020;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.home-btn i {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+
+
 
 /* SOBRE NOSOTROS */
 .sobre-nosotros {
@@ -485,15 +469,12 @@ body {
 }
 
 .titulo {
-      text-align: center;
-    margin: 40px 0;
-    font-size: 38px;
-    font-weight: 700;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    padding-bottom: 15px;
+      padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: #2e7d22;
+            box-shadow: 0 2px 10px #0002;
 }
 
 .titulo::after {
@@ -545,10 +526,12 @@ body {
 }
 
 .card img {
-    width: 100%;
+   width: 100%;
     height: 150px;
-    object-fit: cover;
+    object-fit: contain;   
     border-radius: 12px;
+    background: white;     
+    padding: 5px;  
 }
 
 .card h3 {
@@ -568,3 +551,96 @@ body {
     font-size: 18px;
     color: #27ae60;
 }
+
+
+/*PAGINA PRODUCTOS*/
+
+
+        /* Encabezado */
+        .encabezado-destacado {
+            
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: #2e7d22;
+            box-shadow: 0 2px 10px #0002;
+        }
+
+        /* Contenedor general */
+        .contenedor-destacado {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Títulos */
+        .titulo-destacado {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        /* Grid independiente */
+        .rejilla-destacados {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        /* Tarjetas de producto */
+        .tarjeta-destacado {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .tarjeta-destacado:hover {
+            transform: translateY(-5px);
+        }
+
+        .tarjeta-destacado img {
+         width: 100%;
+        height: 200px;
+        object-fit: contain;   
+        border-radius: 12px;
+        background: white;     
+        padding: 5px;  
+        }
+
+        .nombre-destacado {
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
+        .precio-destacado {
+            font-size: 18px;
+            margin-top: 8px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        /* Pie */
+        .pie-destacado {
+            background: #f3c8c8;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            font-weight: 600;
+        }
+
+            
+    footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
