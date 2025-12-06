@@ -2,7 +2,7 @@ function toggleMenu() {
     document.getElementById("menu").classList.toggle("mostrar");
 }
 
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
     let carruselPrincial = new Carrusel(
         document.querySelector(".carrusel")
     );
@@ -10,17 +10,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
 });
 
 // Programacion Orientado Objetos
-
 class Carrusel {
     constructor(contenedor) {
         this.container = contenedor;
         this.track = contenedor.querySelector(".carrusel-track");
         this.items = [...this.track.children];
-
         this.btnLeft = contenedor.querySelector(".carrusel_left");
         this.btnRight = contenedor.querySelector(".carrusel_right");
         this.indicadores = contenedor.querySelector(".carrusel-indicadores");
-
         this.actual = 0;
         this.timer = null;
 
