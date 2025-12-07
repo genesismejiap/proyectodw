@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles/novedades.css">
+    <script src="javascript/novedades.js" defer></script>
+    <title>Novedades – Quiá tsojo</title>
+   
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>Novedades</h1>
+            <p>Descubre los últimos sabores, promociones y eventos de la heladería Quiá tsojo.</p>
+
+            <button class="btn-regresar" onclick="location.href='index.html'">
+                ⟵ Regresar al Inicio
+            </button>
+
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Buscar novedades...">
+                <span class="icon">🔍</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="newsGrid" class="grid"></section>
+
+        <div class="center">
+            <button id="loadMore" class="btn-load">Cargar más</button>
+        </div>
+    </main>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-card">
+            <button id="closeModal" class="modal-close">✕</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+</body>
+</html>
