@@ -1,11 +1,18 @@
-/* Fuente general */
-body {
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-    background-color: #f5f5f5;
 }
 
+body {
+    background-color: #f5f5f5; 
+}
+
+/* =============================
+   NAVBAR
+============================= */
 nav {
     background: linear-gradient(to right, #fda008, #fdb020);
     color: white;
@@ -16,24 +23,20 @@ nav {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-
-
 .logo {
     font-size: 26px;
     font-weight: 700;
-    color: #2e7d22;
+    color: #f3f5f2;
 }
 
 .nav-placeholder {
-    width: 100px; /* Espacio para mantener el balance */
+    width: 100px;
 }
-/* Lista del menú */
+
 .menu {
     list-style: none;
     display: flex;
     gap: 25px;
-    margin: 0;
-    padding: 0;
 }
 
 .menu li a {
@@ -51,8 +54,6 @@ nav {
     border-color: #86b300;
 }
 
-
-
 .icono-menu {
     display: none;
     flex-direction: column;
@@ -68,7 +69,6 @@ nav {
     transition: .3s;
 }
 
-
 @media (max-width: 768px) {
     .icono-menu {
         display: flex;
@@ -81,7 +81,6 @@ nav {
         background: white;
         width: 180px;
         flex-direction: column;
-        text-align: right;
         padding: 15px 20px;
         box-shadow: 0 3px 10px rgba(0,0,0,0.1);
         border-radius: 6px;
@@ -93,33 +92,32 @@ nav {
     }
 }
 
+
 .banner-superior {
-    width: 100%;        /* ← Esto sí respeta el tamaño real visible */
+    width: 100%;
     height: 60vh;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
 }
 
 .banner-superior img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 @media (max-width: 768px) {
     .banner-superior {
-        height: 40vh;   /* reduce altura en pantallas pequeñas */
+        height: 40vh;
     }
 }
 
+/* =============================
+   CONTENEDORES Y TITULOS
+============================= */
 .container {
     max-width: 1000px;
     margin: 2rem auto;
     padding: 0 1rem;
-    width: 100%;
-    flex: 1;
 }
 
 .header-section {
@@ -132,7 +130,7 @@ nav {
 }
 
 h1 {
-    color: #fdb020;
+    color: #28be20;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -149,8 +147,7 @@ h1 {
     padding: 0.8rem 1.5rem;
     border-radius: 5px;
     font-weight: bold;
-    transition: all 0.3s;
-    font-size: clamp(0.85rem, 1.5vw, 0.9rem);
+    transition: .3s;
     white-space: nowrap;
 }
 
@@ -160,14 +157,9 @@ h1 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.home-btn i {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-}
-
-
-
-
-/* SOBRE NOSOTROS */
+/* =============================
+   SECCIÓN SOBRE NOSOTROS
+============================= */
 .sobre-nosotros {
     padding: 60px 8%;
     background: #eef2ff;
@@ -178,32 +170,33 @@ h1 {
     font-size: 2.3rem;
     font-weight: 700;
     margin-bottom: 50px;
-    color: #333;
+    color: #86b300;
 }
 
 .contenido-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: start;
     gap: 40px;
 }
 
-.info h3, .features h3 {
+.info h3, 
+.features h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: #333;
+    color: #86b300;
 }
 
-.info p, .features p {
-    color: #555;
+.info p, 
+.features p {
+    color: #302e2e;
     line-height: 1.6;
-    margin-bottom: 15px;
 }
 
-.btn-azul {
+.btn-azul,
+.btn-rosa {
     display: inline-block;
     padding: 12px 25px;
-    background: #4db4ff;
+    background: #FDA61B;
     color: white;
     text-decoration: none;
     border-radius: 25px;
@@ -215,22 +208,10 @@ h1 {
     background: #299be6;
 }
 
-.btn-rosa {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #ff85ad;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 600;
-    transition: .3s;
-}
-
 .btn-rosa:hover {
-    background: #ff6895;
+    background: #dce1da;
 }
 
-/* Imagen */
 .imagen-central img {
     width: 100%;
     border-radius: 20px;
@@ -239,13 +220,6 @@ h1 {
 
 .features ul {
     list-style: none;
-    padding: 0;
-}
-
-.features li {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    color: #333;
 }
 
 @media (max-width: 900px) {
@@ -257,75 +231,93 @@ h1 {
     .imagen-central img {
         max-width: 70%;
         margin: auto;
-        display: block;
     }
 }
 
-/* CATALOGO */
+/* =============================
+   CATALOGO
+============================= */
 .catalogo {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: stretch;
-    min-height: 50vh;
+    min-height: 450px;          /* Nuevo: altura equilibrada */
 }
 
 .catalogo-left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    max-height: 450px;          /* Nuevo: evita que sea demasiado grande */
 }
 
 .catalogo-right {
-    background: #f59bb8;
-    padding: 25px 20px;
+    background: #f9ab2f;
+    padding: 40px 30px;
     text-align: center;
-    color: white;
+    color: #fbf4eb;
+
     display: flex;
     flex-direction: column;
+    align-items: center;         /* Nuevo */
     justify-content: center;
+    gap: 20px;                   /* Nuevo: mejor separación */
 }
 
 .catalogo-right h2 {
     font-size: 2rem;
-    margin-bottom: 15px;
+    margin: 0;
 }
 
 .catalogo-right p {
-    opacity: .8;
-    line-height: 1.6;
-    margin-bottom: 30px;
+    font-size: 1.1rem;
+    max-width: 300px;           /* Nuevo: legible */
 }
 
-.btn-order {
-    display: inline-block;
-    padding: 8px 18px;
-    font-size: 0.9rem;
-    background: #4db4ff;
+.catalogo-right .btn-order {
+    padding: 10px 25px;
+    background: #86b300;
+    border-radius: 25px;
     color: white;
-    border-radius: 20px;
+    font-weight: bold;
     text-decoration: none;
-    font-weight: 600;
-    transition: .3s;
+    transition: background 0.3s ease; /* Nuevo: animación */
 }
 
-.btn-order:hover {
+.catalogo-right .btn-order:hover {
     background: #2898e0;
 }
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
     .catalogo {
         grid-template-columns: 1fr;
+        min-height: 350px;
     }
-    .catalogo {
-        padding: 40px 25px;
+
+    .catalogo-left img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .catalogo-right h2 {
+        font-size: 1.6rem;
+    }
+    
+    .catalogo-right p {
+        font-size: 1rem;
     }
 }
 
 
-/* SERVICIOS */
+
+
+/* =============================
+   SERVICIOS
+============================= */
 .servicios {
     padding: 70px 8%;
-    background: #eef2ff;
+    background: #f5f5f5;
     text-align: center;
 }
 
@@ -355,10 +347,7 @@ h1 {
     margin: auto;
     border-radius: 50%;
     padding: 8px;
-    background: linear-gradient(145deg, #ff95c8, #ffc2e0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(145deg, #edd027, #bf8a17);
 }
 
 .img-wrap img {
@@ -368,45 +357,22 @@ h1 {
     object-fit: cover;
 }
 
-.card-servicio h3 {
-    margin-top: 20px;
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
-.card-servicio p {
-    margin: 10px 0 20px;
-    color: #666;
-    line-height: 1.6;
-}
-
-.card-servicio a {
-    text-decoration: none;
-    color: #4db4ff;
-    font-weight: 600;
-    transition: .3s;
-}
-
-.card-servicio a:hover {
-    color: #1b88d6;
-}
-
-/* RESPONSIVE */
 @media (max-width: 900px) {
     .servicios-grid {
         grid-template-columns: 1fr;
     }
 }
 
-/* Banner superior recto */
+/* =============================
+   BANNER SIMPLE
+============================= */
 .banner-simple {
     width: 100%;
     height: 180px;
-    background: #f3c8c8; /* Color pastel bonito */
+    background: #f3c8c8;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
 }
 
 .nosotros-titulo {
@@ -415,7 +381,9 @@ h1 {
     color: #333;
 }
 
-/* NOSOTROS GRID */
+/* =============================
+   NOSOTROS GRID
+============================= */
 .nosotros-container {
     padding: 40px 8%;
 }
@@ -434,76 +402,105 @@ h1 {
 
 .nosotros-texto h2 {
     font-size: 2rem;
-    margin-bottom: 15px;
 }
 
 .nosotros-texto p {
     color: #444;
     line-height: 1.6;
-    margin-bottom: 15px;
 }
 
-/* Footer recto */
-.footer-simple {
-    width: 100%;
-    background: #f3c8c8;
+@media (max-width: 900px) {
+    .nosotros-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================
+   FOOTER
+============================= */
+.footer-simple,
+.pie-destacado,
+footer {
+    background: #c1b6b6;
     text-align: center;
     padding: 25px 0;
-    margin-top: 60px;
     font-weight: 600;
 }
 
-/*PAGINA MENU*/
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+/* =============================
+   GALERÍA
+============================= */
+.galeria-fotos {
+    padding: 60px 8%;
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    max-width: 1200px;
+    margin: 30px auto 20px;
 }
 
-body {
-    background: #f3f3f3;
-    padding: 20px;
+.galeria-seccion {
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 700;
 }
 
+.contenido-galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.info h3 {
+    font-size: 1.8rem;
+}
+
+.info p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.galeria-imagenes img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #0002;
+    transition: .3s;
+}
+
+.galeria-imagenes img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .contenido-galeria {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =============================
+   MENU - TARJETAS
+============================= */
 .titulo {
-      padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: 700;
-            color: #2e7d22;
-            box-shadow: 0 2px 10px #0002;
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #2e7d22;
+    box-shadow: 0 2px 10px #0002;
 }
-
-.titulo::after {
-    content: "";
-    position: absolute;
-    width: 120px;
-    height: 4px;
-    background: linear-gradient(90deg, #ff8a00, #ff3d00);
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 2px;
-}
-
 
 .categoria {
     margin-bottom: 40px;
 }
 
 .categoria h2 {
-        font-size: 30px;
-    color: #222;
-    margin-bottom: 20px;
-    font-weight: 600;
-    display: inline-block;
+    font-size: 30px;
     padding: 8px 18px;
     border-radius: 10px;
     background: linear-gradient(135deg, #ffddc1, #ffe9d6);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
 }
 
 .grid {
@@ -513,11 +510,11 @@ body {
 }
 
 .card {
-    background: #fff;
+    background: white;
     border-radius: 15px;
     padding: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: .3s;
 }
 
@@ -526,121 +523,133 @@ body {
 }
 
 .card img {
-   width: 100%;
+    width: 100%;
     height: 150px;
-    object-fit: contain;   
-    border-radius: 12px;
-    background: white;     
-    padding: 5px;  
-}
-
-.card h3 {
-    margin: 10px 0 5px;
-    font-size: 20px;
-}
-
-.card p {
-    font-size: 14px;
-    color: #555;
+    object-fit: contain;
+    padding: 5px;
 }
 
 .precio {
-    display: inline-block;
-    margin-top: 10px;
-    font-weight: bold;
     font-size: 18px;
+    font-weight: bold;
     color: #27ae60;
 }
 
-
-/*PAGINA PRODUCTOS*/
-
-
-        /* Encabezado */
-        .encabezado-destacado {
-            
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: 700;
-            color: #2e7d22;
-            box-shadow: 0 2px 10px #0002;
-        }
-
-        /* Contenedor general */
-        .contenedor-destacado {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        /* Títulos */
-        .titulo-destacado {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 25px;
-            color: #333;
-        }
-
-        /* Grid independiente */
-        .rejilla-destacados {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 25px;
-        }
-
-        /* Tarjetas de producto */
-        .tarjeta-destacado {
-            background: white;
-            border-radius: 15px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-
-        .tarjeta-destacado:hover {
-            transform: translateY(-5px);
-        }
-
-        .tarjeta-destacado img {
-         width: 100%;
-        height: 200px;
-        object-fit: contain;   
-        border-radius: 12px;
-        background: white;     
-        padding: 5px;  
-        }
-
-        .nombre-destacado {
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 12px;
-        }
-
-        .precio-destacado {
-            font-size: 18px;
-            margin-top: 8px;
-            font-weight: bold;
-            color: #27ae60;
-        }
-
-        /* Pie */
-        .pie-destacado {
-            background: #f3c8c8;
-            text-align: center;
-            padding: 25px;
-            margin-top: 50px;
-            font-weight: 600;
-        }
-
-            
-    footer {
-    background: #333;
-    color: white;
+/* =============================
+   DESTACADOS
+============================= */
+.encabezado-destacado {
     text-align: center;
-    padding: 1.5rem;
-    margin-top: auto;
-    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: #2e7d22;
+    font-size: 28px;
+    padding: 20px;
+    font-weight: 700;
 }
 
+.contenedor-destacado {
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.rejilla-destacados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.tarjeta-destacado {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.tarjeta-destacado img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    padding: 5px;
+}
+
+.tarjeta-destacado:hover {
+    transform: translateY(-5px);
+}
+
+.nombre-destacado {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.precio-destacado {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+
+/* =============================
+   ESPACIADO GLOBAL PARA MEJOR LECTURA
+============================= */
+
+/* Más espacio vertical entre secciones */
+section, 
+.sobre-nosotros,
+.catalogo,
+.servicios,
+.nosotros-container,
+.galeria-fotos,
+.contenedor-destacado {
+    margin-bottom: 30px;
+}
+
+/* Separación interna en bloques de texto */
+.info p,
+.features p,
+.nosotros-texto p,
+.card-servicio p {
+    margin-bottom: 20px;
+}
+
+/* Más aire arriba de los títulos */
+h1, h2, h3, .titulo-seccion, .galeria-seccion, .titulo, .encabezado-destacado {
+    margin-bottom: 25px;
+}
+
+/* En tarjetas de productos / destacados */
+.card,
+.tarjeta-destacado {
+    padding: 22px;
+}
+
+/* Para que las imágenes tengan aire */
+.card img,
+.tarjeta-destacado img,
+.imagen-central img,
+.nosotros-img img,
+.galeria-imagenes img {
+    margin-bottom: 15px;
+}
+
+/* Espacio extra entre columnas de texto */
+.contenido-section,
+.nosotros-grid,
+.contenido-galeria {
+    gap: 50px;
+}
+
+/* Catálogo: dar un poco más de aire al texto */
+.catalogo-right p {
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* Servicios */
+.card-servicio {
+    padding: 45px 30px;
+}
+
+/* Galería */
+.galeria-fotos {
+    padding: 70px 10%;
+}
