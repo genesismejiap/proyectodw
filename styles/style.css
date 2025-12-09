@@ -279,7 +279,7 @@ h1 {
     background: #2898e0;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 900px) {
     .catalogo {
         grid-template-columns: 1fr;
