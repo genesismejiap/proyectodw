@@ -9,6 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
     carruselPrincial.init();
 });
 
+const iconoMenu = document.getElementById("icono-menu");
+const menu = document.getElementById("menu");
+
+iconoMenu.addEventListener("click", () => {
+    menu.classList.toggle("mostrar");
+});
+
+
 
 class Carrusel {
     constructor(contenedor) {
