@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq-item');
     const searchInput = document.getElementById('searchInput');
     
-    // Función para alternar FAQ
+    
     function toggleFAQ(item) {
         item.classList.toggle('active');
         
@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Inicializar todos los FAQs cerrados excepto el primero de cada categoría
+   
     faqItems.forEach((item, index) => {
-        // Abrir solo el primer item de cada categoría por defecto
+       
         const categoryFirstItems = document.querySelectorAll('.faq-category .faq-item:first-child');
         
         if (Array.from(categoryFirstItems).includes(item)) {
@@ -32,12 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Función de búsqueda
+   
     searchInput.addEventListener('input', function() {
         const searchTerm = this.value.toLowerCase().trim();
         
         if (searchTerm.length === 0) {
-            // Si no hay búsqueda, mostrar todos
+          
             faqItems.forEach(item => {
                 item.style.display = 'block';
                 const category = item.closest('.faq-category');
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (question.includes(searchTerm) || answer.includes(searchTerm)) {
                 item.style.display = 'block';
                 
-                // Abrir el FAQ si coincide con la búsqueda
+               
                 if (!item.classList.contains('active')) {
                     toggleFAQ(item);
                 }
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.style.display = 'none';
             }
             
-            // Mostrar/ocultar categorías según si tienen items visibles
+            
             const category = item.closest('.faq-category');
             if (category) {
                 const visibleItems = Array.from(category.querySelectorAll('.faq-item')).filter(i => i.style.display !== 'none');
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Permitir abrir/cerrar con tecla Enter
+ 
     faqItems.forEach(item => {
         item.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Limpiar búsqueda al hacer clic en la X (si se añade)
+    
     searchInput.addEventListener('search', function() {
         this.value = '';
         faqItems.forEach(item => {
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Mejorar accesibilidad
+    
     faqItems.forEach(item => {
         item.setAttribute('tabindex', '0');
         item.setAttribute('role', 'button');

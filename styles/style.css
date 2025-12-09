@@ -10,9 +10,7 @@ body {
     background-color: #f5f5f5; 
 }
 
-/* =============================
-   NAVBAR
-============================= */
+
 nav {
     background: linear-gradient(to right, #fda008, #fdb020);
     color: white;
@@ -111,9 +109,7 @@ nav {
     }
 }
 
-/* =============================
-   CONTENEDORES Y TITULOS
-============================= */
+
 .container {
     max-width: 1000px;
     margin: 2rem auto;
@@ -157,9 +153,7 @@ h1 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* =============================
-   SECCIÓN SOBRE NOSOTROS
-============================= */
+
 .sobre-nosotros {
     padding: 60px 8%;
     background: #eef2ff;
@@ -234,20 +228,18 @@ h1 {
     }
 }
 
-/* =============================
-   CATALOGO
-============================= */
+
 .catalogo {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 450px;          /* Nuevo: altura equilibrada */
+    min-height: 450px;         
 }
 
 .catalogo-left img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    max-height: 450px;          /* Nuevo: evita que sea demasiado grande */
+    max-height: 450px;          
 }
 
 .catalogo-right {
@@ -258,9 +250,9 @@ h1 {
 
     display: flex;
     flex-direction: column;
-    align-items: center;         /* Nuevo */
+    align-items: center;         
     justify-content: center;
-    gap: 20px;                   /* Nuevo: mejor separación */
+    gap: 20px;                   
 }
 
 .catalogo-right h2 {
@@ -270,7 +262,7 @@ h1 {
 
 .catalogo-right p {
     font-size: 1.1rem;
-    max-width: 300px;           /* Nuevo: legible */
+    max-width: 300px;           
 }
 
 .catalogo-right .btn-order {
@@ -280,7 +272,7 @@ h1 {
     color: white;
     font-weight: bold;
     text-decoration: none;
-    transition: background 0.3s ease; /* Nuevo: animación */
+    transition: background 0.3s ease;
 }
 
 .catalogo-right .btn-order:hover {
@@ -310,11 +302,6 @@ h1 {
 }
 
 
-
-
-/* =============================
-   SERVICIOS
-============================= */
 .servicios {
     padding: 70px 8%;
     background: #f5f5f5;
@@ -363,9 +350,7 @@ h1 {
     }
 }
 
-/* =============================
-   BANNER SIMPLE
-============================= */
+
 .banner-simple {
     width: 100%;
     height: 180px;
@@ -381,9 +366,7 @@ h1 {
     color: #333;
 }
 
-/* =============================
-   NOSOTROS GRID
-============================= */
+
 .nosotros-container {
     padding: 40px 8%;
 }
@@ -415,9 +398,7 @@ h1 {
     }
 }
 
-/* =============================
-   FOOTER
-============================= */
+
 .footer-simple,
 .pie-destacado,
 footer {
@@ -427,9 +408,7 @@ footer {
     font-weight: 600;
 }
 
-/* =============================
-   GALERÍA
-============================= */
+
 .galeria-fotos {
     padding: 60px 8%;
     background: #ffffff;
@@ -479,9 +458,7 @@ footer {
     }
 }
 
-/* =============================
-   MENU - TARJETAS
-============================= */
+
 .menu-elegante {
     max-width: 800px;
     margin: 50px auto;
@@ -510,7 +487,7 @@ footer {
     color: #ff8c00;
 }
 
-/* ---- ITEM DE MENÚ ---- */
+
 .item {
     display: flex;
     gap: 15px;
@@ -552,9 +529,6 @@ footer {
 }
 
 
-/* =============================
-   DESTACADOS
-============================= */
 .encabezado-destacado {
     text-align: center;
     color: #2e7d22;
@@ -605,11 +579,7 @@ footer {
 }
 
 
-/* =============================
-   ESPACIADO GLOBAL PARA MEJOR LECTURA
-============================= */
 
-/* Más espacio vertical entre secciones */
 section, 
 .sobre-nosotros,
 .catalogo,
@@ -620,7 +590,7 @@ section,
     margin-bottom: 30px;
 }
 
-/* Separación interna en bloques de texto */
+
 .info p,
 .features p,
 .nosotros-texto p,
@@ -628,18 +598,18 @@ section,
     margin-bottom: 20px;
 }
 
-/* Más aire arriba de los títulos */
+
 h1, h2, h3, .titulo-seccion, .galeria-seccion, .titulo, .encabezado-destacado {
     margin-bottom: 25px;
 }
 
-/* En tarjetas de productos / destacados */
+
 .card,
 .tarjeta-destacado {
     padding: 22px;
 }
 
-/* Para que las imágenes tengan aire */
+
 .card img,
 .tarjeta-destacado img,
 .imagen-central img,
@@ -648,25 +618,25 @@ h1, h2, h3, .titulo-seccion, .galeria-seccion, .titulo, .encabezado-destacado {
     margin-bottom: 15px;
 }
 
-/* Espacio extra entre columnas de texto */
+
 .contenido-section,
 .nosotros-grid,
 .contenido-galeria {
     gap: 50px;
 }
 
-/* Catálogo: dar un poco más de aire al texto */
+
 .catalogo-right p {
     margin-bottom: 25px;
     line-height: 1.7;
 }
 
-/* Servicios */
+
 .card-servicio {
     padding: 45px 30px;
 }
 
-/* Galería */
+
 .galeria-fotos {
     padding: 70px 10%;
 }

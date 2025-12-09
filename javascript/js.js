@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     carruselPrincial.init();
 });
 
-// Programacion Orientado Objetos
+
 class Carrusel {
     constructor(contenedor) {
         this.container = contenedor;

@@ -82,13 +82,13 @@
     transform: scale(1.05);
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 900px) {
     .contenido-evento {
         grid-template-columns: 1fr;
     }
 
-    /* En móvil, vuelve texto arriba */
+   
     .info {
         order: 1;
     }

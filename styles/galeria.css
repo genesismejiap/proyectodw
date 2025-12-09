@@ -115,7 +115,7 @@ footer {
 }
 
 
-/* GALERÍA DE FOTOS */
+
 .galeria-fotos {
     padding: 60px 8%;
     background: #ffffff;
@@ -140,12 +140,12 @@ footer {
 
 .contenido-galeria {
     display: grid;
-    grid-template-columns: 1fr 1fr;  /* columnas iguales */
+    grid-template-columns: 1fr 1fr;  
     gap: 40px;
     align-items: center;
 }
 
-/* Cambiar orden: imagen a la izquierda, texto a la derecha */
+
 .galeria-imagenes {
     order: 1;
 }
@@ -199,13 +199,13 @@ footer {
     transform: scale(1.05);
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 900px) {
     .contenido-galeria {
         grid-template-columns: 1fr;
     }
 
-    /* En móvil, vuelve texto arriba */
+   
     .info {
         order: 1;
     }
